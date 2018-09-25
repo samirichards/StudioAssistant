@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:local="http://schemas.android.com/apk/res/android-auto">
+    <item android:id="@+id/settings_logout"
+            android:title="Logout"
+            android:icon="@drawable/ic_logout"
+            android:textColor="#000000"/>
+</menu>

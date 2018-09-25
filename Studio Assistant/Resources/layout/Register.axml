@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/RegToolBar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:title="Register"
+        app:titleTextColor="@android:color/background_dark"
+        app:navigationIcon="@drawable/ic_back_arrow_dark" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RegToolBar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/NameBoxes"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:layout_margin="4dp"
+            android:id="@+id/txt_firstName"
+            android:inputType="textPersonName" />
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:layout_margin="4dp"
+            android:id="@+id/txt_lastName"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/NameBoxes"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/UserBoxes"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:layout_margin="4dp"
+            android:id="@+id/txt_username"
+            android:inputType="text" />
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:layout_margin="4dp"
+            android:id="@+id/txt_email" />
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_margin="4dp"
+            android:id="@+id/txt_password" />
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:layout_margin="4dp"
+            android:id="@+id/txt_conf_password" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:id="@+id/btn_regSubmit"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:theme="@style/StudioButton"
+            android:textColor="@color/abc_primary_text_material_dark"
+            android:enabled="false" />
+    </LinearLayout>
+</RelativeLayout>

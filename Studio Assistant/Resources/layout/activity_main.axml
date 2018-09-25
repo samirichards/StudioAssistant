@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/MainToolBar"
+            android:layout_width="fill_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:foregroundTint="@android:color/background_light"
+            android:foregroundTintMode="src_over"
+            android:elevation="@dimen/abc_action_bar_elevation_material"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="Studio Assistant"
+            app:titleTextColor="@android:color/background_light"
+            app:subtitleTextColor="@android:color/background_light"
+            app:subtitle="News"
+            app:navigationIcon="@drawable/ic_menu_24dp" />
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:theme="@style/BorderlessButton"
+            app:elevation="4dp"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            android:background="?android:attr/windowBackground"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/navigation" />
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/frag_mainContainer"
+            android:tag="MainFrag"
+            android:layout_below="@id/MainToolBar"
+            android:layout_above="@id/navigation"
+            android:minWidth="25px"
+            android:minHeight="25px" />
+    </RelativeLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/NavView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/navbar"
+        app:elevation="@dimen/design_navigation_elevation"
+        app:headerLayout="@layout/nav_header" />
+</android.support.v4.widget.DrawerLayout>

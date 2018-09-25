@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/Timetable_Toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:foregroundTint="@android:color/background_light"
+        android:foregroundTintMode="src_over"
+        android:elevation="@dimen/abc_action_bar_elevation_material"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Timetable"
+        app:titleTextColor="@android:color/background_light"
+        app:navigationIcon="@drawable/ic_back_arrow" />
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:rippleColor="@color/colorAccentOther"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:clickable="true"
+        android:id="@+id/fab_timetable_add"
+        android:src="@drawable/ic_add" />
+    <android.support.v7.widget.CardView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_above="@id/fab_timetable_add"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardView1"
+        android:elevation="8dp" />
+</RelativeLayout>

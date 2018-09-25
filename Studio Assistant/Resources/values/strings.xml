@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Studio Assistant</string>
+  <string name="logout_message_title">Logout?</string>
+  <string name="logout_message">Are you sure you want to logout? (This will also close the application)</string>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/SettingsToolBar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:foregroundTint="@android:color/background_light"
+        android:foregroundTintMode="src_over"
+        android:elevation="@dimen/abc_action_bar_elevation_material"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Settings"
+        app:titleTextColor="@android:color/background_light"
+        app:navigationIcon="@drawable/ic_back_arrow" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/SettingsToolBar"
+        android:layout_centerInParent="true"
+        android:id="@+id/SettingsScrollView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:id="@+id/SettingsLinear">
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="8dp"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        app:cardElevation="0dp"
+                        app:cardCornerRadius="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_centerVertical="true">
+                        <ImageView
+                            android:src="@color/colorAccentOther"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/accIconDisplay" />
+                    </android.support.v7.widget.CardView>
+                    <TextView
+                        android:text="Name Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_margin="12dp"
+                        android:id="@+id/settingsName" />
+                    <TextView
+                        android:text="Username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_margin="12dp"
+                        android:id="@+id/settingsUsername" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                app:cardCornerRadius="8dp"
+                app:cardElevation="@dimen/cardview_default_elevation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="4dp"
+                android:id="@+id/ChangePasswordCard">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change Password"
+                        android:layout_margin="4dp" />
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:hint="Old Password"
+                        android:lines="1"
+                        android:theme="@style/Base.V7.Widget.AppCompat.EditText"
+                        android:focusedByDefault="false"
+                        android:id="@+id/txt_settings_oldPassword" />
+                    <android.support.design.widget.TextInputEditText
+                        android:focusedByDefault="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:hint="New Password"
+                        android:lines="1"
+                        android:theme="@style/Base.V7.Widget.AppCompat.EditText"
+                        android:id="@+id/txt_settings_newPassword" />
+                    <android.support.design.widget.TextInputEditText
+                        android:focusedByDefault="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:hint="Confirm Password"
+                        android:lines="1"
+                        android:theme="@style/Base.V7.Widget.AppCompat.EditText"
+                        android:id="@+id/txt_settings_newPasswordConf" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change Password"
+                        android:theme="@style/StudioButton"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:id="@+id/btn_settings_changePassword" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
